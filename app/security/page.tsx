@@ -13,6 +13,7 @@ import {
   SprayCan,
   ShieldCheck,
   Siren,
+  VenetianMask,
 } from "lucide-react";
 
 const securityChecks = [
@@ -114,6 +115,16 @@ export default function SecurityPage() {
 
             <div className="threat-bug">
               <Bug size={34} />
+            </div>
+
+            <div className="threat-hacker">
+              <VenetianMask size={34} />
+            </div>
+
+            <div className="cyber-monster">
+              <span className="monster-eye monster-eye-left" />
+              <span className="monster-eye monster-eye-right" />
+              <span className="monster-mouth" />
             </div>
 
             <div className="cyber-spray">
