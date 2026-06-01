@@ -1,13 +1,16 @@
 import Link from "next/link";
 import {
   ArrowRight,
+  Bug,
   ClipboardCheck,
   Eye,
   FileSearch,
   Fingerprint,
+  Laptop,
   LockKeyhole,
   Scale,
   ServerCog,
+  SprayCan,
   ShieldCheck,
   Siren,
 } from "lucide-react";
@@ -86,13 +89,45 @@ export default function SecurityPage() {
   return (
     <main>
       <section className="page-hero security-hero">
-        <p className="eyebrow">Security</p>
-        <h1>Built with care for your data, systems and business.</h1>
-        <p>
-          Security is not an afterthought. EffectX takes a careful, methodical
-          approach to websites, applications, hosting and business data so
-          clients can trust the systems we build and support.
-        </p>
+        <div className="security-hero-layout">
+          <div>
+            <p className="eyebrow">Security</p>
+            <h1>Built with care for your data, systems and business.</h1>
+            <p>
+              Security is not an afterthought. EffectX takes a careful,
+              methodical approach to websites, applications, hosting and
+              business data so clients can trust the systems we build and
+              support.
+            </p>
+          </div>
+
+          <div className="security-visual" aria-hidden="true">
+            <div className="security-device">
+              <div className="device-screen">
+                <Laptop size={76} />
+                <span className="access-line access-line-one" />
+                <span className="access-line access-line-two" />
+                <span className="access-line access-line-three" />
+              </div>
+              <div className="device-base" />
+            </div>
+
+            <div className="threat-bug">
+              <Bug size={34} />
+            </div>
+
+            <div className="cyber-spray">
+              <SprayCan size={42} />
+              <span className="spray-cloud spray-cloud-one" />
+              <span className="spray-cloud spray-cloud-two" />
+              <span className="spray-cloud spray-cloud-three" />
+            </div>
+
+            <div className="security-shield">
+              <ShieldCheck size={38} />
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="section security-intro">

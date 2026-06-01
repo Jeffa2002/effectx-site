@@ -639,6 +639,192 @@ h3 {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.security-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.72fr);
+  gap: clamp(34px, 7vw, 92px);
+  align-items: center;
+}
+
+.security-visual {
+  position: relative;
+  width: min(430px, 100%);
+  min-height: 390px;
+  justify-self: end;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 68% 22%, rgba(16, 212, 172, 0.2), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(201, 231, 236, 0.24);
+  border-radius: 8px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.security-visual::before,
+.security-visual::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.security-visual::before {
+  width: 210px;
+  height: 210px;
+  right: -86px;
+  top: -82px;
+  border: 1px solid rgba(16, 212, 172, 0.22);
+}
+
+.security-visual::after {
+  width: 160px;
+  height: 160px;
+  left: -58px;
+  bottom: -52px;
+  background: rgba(11, 159, 208, 0.1);
+}
+
+.security-device {
+  position: absolute;
+  left: 58px;
+  right: 58px;
+  bottom: 62px;
+  z-index: 2;
+}
+
+.device-screen {
+  position: relative;
+  height: 190px;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  background: rgba(6, 36, 49, 0.72);
+  border: 1px solid rgba(201, 231, 236, 0.28);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.device-screen svg {
+  filter: drop-shadow(0 0 24px rgba(16, 212, 172, 0.26));
+}
+
+.device-base {
+  width: 58%;
+  height: 14px;
+  margin: 12px auto 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+
+.access-line {
+  position: absolute;
+  left: 22px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--aqua), rgba(16, 212, 172, 0));
+  border-radius: 999px;
+  opacity: 0.72;
+  transform-origin: left;
+  animation: accessScan 3.6s ease-in-out infinite;
+}
+
+.access-line-one {
+  top: 36px;
+  width: 44%;
+}
+
+.access-line-two {
+  top: 54px;
+  width: 62%;
+  animation-delay: 0.38s;
+}
+
+.access-line-three {
+  bottom: 38px;
+  width: 52%;
+  animation-delay: 0.76s;
+}
+
+.threat-bug {
+  position: absolute;
+  top: 76px;
+  left: 20px;
+  z-index: 4;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, #e24747, #792626);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  box-shadow: 0 18px 42px rgba(121, 38, 38, 0.26);
+  animation: bugApproach 5.8s ease-in-out infinite;
+}
+
+.cyber-spray {
+  position: absolute;
+  top: 88px;
+  right: 32px;
+  z-index: 5;
+  width: 74px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+  background: var(--aqua);
+  border: 7px solid rgba(255, 255, 255, 0.88);
+  border-radius: 999px;
+  box-shadow: 0 20px 42px rgba(16, 212, 172, 0.28);
+  animation: sprayTilt 5.8s ease-in-out infinite;
+}
+
+.spray-cloud {
+  position: absolute;
+  top: 25px;
+  right: 62px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 999px;
+  opacity: 0;
+  transform-origin: right;
+  animation: sprayBurst 5.8s ease-in-out infinite;
+}
+
+.spray-cloud-one {
+  width: 64px;
+}
+
+.spray-cloud-two {
+  top: 39px;
+  width: 84px;
+  animation-delay: 0.08s;
+}
+
+.spray-cloud-three {
+  top: 53px;
+  width: 58px;
+  animation-delay: 0.16s;
+}
+
+.security-shield {
+  position: absolute;
+  right: 72px;
+  bottom: 68px;
+  z-index: 6;
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+  background: #fff;
+  border: 5px solid rgba(16, 212, 172, 0.88);
+  border-radius: 999px;
+  box-shadow: 0 0 34px rgba(16, 212, 172, 0.32);
+  animation: shieldConfirm 5.8s ease-in-out infinite;
+}
+
 .security-intro {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -943,6 +1129,88 @@ h3 {
   }
 }
 
+@keyframes bugApproach {
+  0%,
+  18% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+
+  42% {
+    transform: translate(115px, 58px) scale(1.08);
+    opacity: 1;
+  }
+
+  54%,
+  72% {
+    transform: translate(115px, 58px) scale(0.62);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sprayTilt {
+  0%,
+  30%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  42%,
+  56% {
+    transform: rotate(-13deg);
+  }
+}
+
+@keyframes sprayBurst {
+  0%,
+  34%,
+  66%,
+  100% {
+    opacity: 0;
+    transform: scaleX(0.15) translateX(0);
+  }
+
+  44%,
+  56% {
+    opacity: 1;
+    transform: scaleX(1) translateX(-28px);
+  }
+}
+
+@keyframes shieldConfirm {
+  0%,
+  46%,
+  100% {
+    transform: scale(0.86);
+    opacity: 0.58;
+  }
+
+  58%,
+  78% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes accessScan {
+  0%,
+  100% {
+    transform: scaleX(0.22);
+    opacity: 0.3;
+  }
+
+  45%,
+  70% {
+    transform: scaleX(1);
+    opacity: 0.78;
+  }
+}
+
 @media (max-width: 1080px) {
   .hero-layout {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.55fr);
@@ -1060,6 +1328,7 @@ h3 {
   }
 
   .split,
+  .security-hero-layout,
   .security-intro,
   .case-grid,
   .contact-grid,
@@ -1074,6 +1343,11 @@ h3 {
 
   .cta-section {
     padding: 34px 24px;
+  }
+
+  .security-visual {
+    width: min(520px, 100%);
+    justify-self: start;
   }
 }
 
@@ -1145,6 +1419,42 @@ h3 {
     font-size: 1.85rem;
   }
 
+  .security-visual {
+    min-height: 330px;
+  }
+
+  .security-device {
+    left: 36px;
+    right: 36px;
+    bottom: 46px;
+  }
+
+  .device-screen {
+    height: 158px;
+  }
+
+  .threat-bug {
+    top: 58px;
+    left: 14px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .cyber-spray {
+    top: 64px;
+    right: 18px;
+    width: 64px;
+    height: 64px;
+    border-width: 6px;
+  }
+
+  .security-shield {
+    right: 42px;
+    bottom: 48px;
+    width: 56px;
+    height: 56px;
+  }
+
   .hero-flow-card {
     padding: 22px 18px;
   }
@@ -1188,7 +1498,12 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   .hero-flow-card::after,
   .hero-flow-line::before,
-  .hero-flow-step {
+  .hero-flow-step,
+  .threat-bug,
+  .cyber-spray,
+  .spray-cloud,
+  .security-shield,
+  .access-line {
     animation: none;
   }
 
