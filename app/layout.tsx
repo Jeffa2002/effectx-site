@@ -58,7 +58,13 @@ export default function RootLayout({
         {children}
         <footer className="site-footer">
           <div>
-            <Image src="/images/effectx-logo.png" alt="EffectX" width={900} height={300} />
+            <Image
+              className="footer-logo"
+              src="/images/effectx-logo-transparent.png"
+              alt="EffectX"
+              width={432}
+              height={383}
+            />
             <p>
               Custom software, websites and practical technology support from
               Perth, Western Australia.
