@@ -1,9 +1,12 @@
 import Link from "next/link";
 import {
   ArrowRight,
+  ClipboardCheck,
   Eye,
   FileSearch,
+  Fingerprint,
   LockKeyhole,
+  Scale,
   ServerCog,
   ShieldCheck,
   Siren,
@@ -50,6 +53,29 @@ const securitySteps = [
   "Monitor, patch and improve the system after it is live.",
 ];
 
+const trustStandards = [
+  {
+    title: "PII and personal data",
+    text: "We treat personally identifiable information as sensitive from the start. We look at what is collected, why it is needed, who can access it and how long it should be kept.",
+    Icon: Fingerprint,
+  },
+  {
+    title: "GDPR-aware thinking",
+    text: "For projects that may involve European users or privacy obligations, we design with clear consent, data minimisation, access control and deletion needs in mind.",
+    Icon: Scale,
+  },
+  {
+    title: "NIST CSF-style structure",
+    text: "We use the same practical security mindset: govern the work, identify risks, protect systems, detect issues, respond clearly and recover sensibly.",
+    Icon: ShieldCheck,
+  },
+  {
+    title: "SOC 2-ready habits",
+    text: "Where a client needs stronger assurance, we can support SOC 2-style practices such as change control, access reviews, monitoring, evidence and incident records.",
+    Icon: ClipboardCheck,
+  },
+];
+
 export const metadata = {
   title: "Security",
   description:
@@ -93,6 +119,28 @@ export default function SecurityPage() {
         </div>
       </section>
 
+      <section className="section security-standards">
+        <div className="section-heading">
+          <p className="eyebrow">Data and standards</p>
+          <h2>Security language that matches how serious businesses work.</h2>
+          <p>
+            We do not claim compliance or certification unless it has been
+            formally assessed. What we do is build with recognised security and
+            privacy principles in mind, so the system is easier to review,
+            operate and trust.
+          </p>
+        </div>
+        <div className="standards-grid">
+          {trustStandards.map(({ title, text, Icon }) => (
+            <article className="standard-card" key={title}>
+              <Icon size={28} />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section dark-section security-method">
         <div className="section-heading">
           <p className="eyebrow">Methodical delivery</p>
@@ -115,9 +163,10 @@ export default function SecurityPage() {
         </div>
         <p>
           We do not make vague promises. We explain what we are protecting, what
-          the realistic risks are and what steps we recommend. That gives
-          business owners a clear view of how their website, application and data
-          are being looked after.
+          the realistic risks are and what steps we recommend. That includes
+          plain-English advice about personal data, business records, access
+          controls, vulnerabilities and the evidence a client may need for their
+          own governance or compliance obligations.
         </p>
       </section>
 
