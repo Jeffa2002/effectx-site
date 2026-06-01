@@ -7,20 +7,46 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <div className="hero-content">
-          <p className="eyebrow">Perth, Western Australia</p>
-          <h1>EffectX builds custom software and websites for business.</h1>
-          <p className="hero-copy">
-            We help businesses solve problems with clear websites, custom
-            applications and connected systems that make daily work easier.
-          </p>
-          <div className="hero-actions">
-            <Link className="primary-button" href="/contact">
-              Start a project <ArrowRight size={18} />
-            </Link>
-            <Link className="secondary-button" href="/work">
-              See our work
-            </Link>
+        <div className="hero-layout">
+          <div className="hero-content">
+            <p className="eyebrow">Perth, Western Australia</p>
+            <h1>EffectX builds custom software and websites for business.</h1>
+            <p className="hero-copy">
+              We help businesses solve problems with clear websites, custom
+              applications and connected systems that make daily work easier.
+            </p>
+            <div className="hero-actions">
+              <Link className="primary-button" href="/contact">
+                Start a project <ArrowRight size={18} />
+              </Link>
+              <Link className="secondary-button" href="/work">
+                See our work
+              </Link>
+            </div>
+          </div>
+
+          <div className="hero-visual" aria-hidden="true">
+            <div className="hero-flow-card">
+              <div className="hero-flow-heading">
+                <span>Simple build process</span>
+                <strong>From idea to launch</strong>
+              </div>
+              <div className="hero-flow-line" />
+              <div className="hero-flow-steps">
+                {processSteps.map(({ title, outcome, Icon }, index) => (
+                  <div className="hero-flow-step" key={title}>
+                    <div className="hero-flow-node">
+                      <Icon size={20} />
+                    </div>
+                    <div>
+                      <small>{String(index + 1).padStart(2, "0")}</small>
+                      <p>{title}</p>
+                      <span>{outcome}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
