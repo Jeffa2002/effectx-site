@@ -130,6 +130,7 @@ export const reasons = [
 
 export const navLinks = [
   { href: "/services", label: "Services" },
+  { href: "/security", label: "Security" },
   { href: "/work", label: "Our Work" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
