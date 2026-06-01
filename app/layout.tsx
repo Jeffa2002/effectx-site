@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     siteName: "EffectX",
     images: ["/images/effectx-logo.png"],
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
