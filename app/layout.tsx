@@ -6,16 +6,16 @@ import { navLinks } from "./data";
 
 export const metadata: Metadata = {
   title: {
-    default: "EffectX | Technology Consulting & Bespoke Applications",
+    default: "EffectX | Custom Software & Websites",
     template: "%s | EffectX",
   },
   description:
-    "EffectX works with businesses to build bespoke applications, websites and technology systems that solve real operational problems.",
+    "EffectX is a Perth technology consulting business building custom software, websites and connected systems.",
   metadataBase: new URL("https://effectx.com.au"),
   openGraph: {
-    title: "EffectX | Technology Consulting & Bespoke Applications",
+    title: "EffectX | Custom Software & Websites",
     description:
-      "Bespoke applications, websites, integrations and technology problem solving for modern businesses.",
+      "Custom software, websites, integrations and practical technology support from Perth, Western Australia.",
     url: "https://effectx.com.au",
     siteName: "EffectX",
     images: ["/images/effectx-logo.png"],
@@ -35,8 +35,8 @@ export default function RootLayout({
             <Image
               src="/images/effectx-logo.png"
               alt="EffectX"
-              width={450}
-              height={99}
+              width={900}
+              height={300}
               priority
             />
           </Link>
@@ -54,16 +54,17 @@ export default function RootLayout({
         {children}
         <footer className="site-footer">
           <div>
-            <Image src="/images/effectx-logo.png" alt="EffectX" width={450} height={99} />
+            <Image src="/images/effectx-logo.png" alt="EffectX" width={900} height={300} />
             <p>
-              Bespoke software, websites and technology problem solving for
-              businesses that need practical systems.
+              Custom software, websites and practical technology support from
+              Perth, Western Australia.
             </p>
           </div>
           <div>
             <strong>Contact</strong>
             <a href="mailto:hello@effectx.com.au">hello@effectx.com.au</a>
             <a href="https://effectx.com.au">effectx.com.au</a>
+            <span>Perth, Western Australia</span>
           </div>
           <div>
             <strong>Navigate</strong>

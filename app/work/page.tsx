@@ -2,8 +2,7 @@ import { work } from "../data";
 
 export const metadata = {
   title: "Our Work",
-  description:
-    "Selected EffectX work including Projenta, Crossbench, CRM8 and YieldDock.",
+  description: "Selected EffectX work including Projenta and Crossbench.",
 };
 
 export default function WorkPage() {
@@ -11,10 +10,10 @@ export default function WorkPage() {
     <main>
       <section className="page-hero">
         <p className="eyebrow">Our Work</p>
-        <h1>Selected platforms, products and business systems.</h1>
+        <h1>Selected projects.</h1>
         <p>
-          These examples show the type of work EffectX delivers: focused products,
-          operational tools and workflows built around real business needs.
+          These examples show the kind of practical software and product work
+          EffectX delivers.
         </p>
       </section>
 

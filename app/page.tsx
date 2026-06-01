@@ -8,12 +8,11 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="hero-content">
-          <p className="eyebrow">Technology consulting for practical business systems</p>
-          <h1>EffectX builds the software, websites and workflows your business actually needs.</h1>
+          <p className="eyebrow">Perth, Western Australia</p>
+          <h1>EffectX builds custom software and websites for business.</h1>
           <p className="hero-copy">
-            We work with businesses to design, build and operate bespoke applications,
-            credible websites and connected technology systems that remove friction
-            from day-to-day work.
+            We help businesses solve problems with clear websites, custom
+            applications and connected systems that make daily work easier.
           </p>
           <div className="hero-actions">
             <Link className="primary-button" href="/contact">
@@ -29,12 +28,12 @@ export default function Home() {
       <section className="section split intro-band">
         <div>
           <p className="eyebrow">What we do</p>
-          <h2>Technology consulting with delivery attached.</h2>
+          <h2>We help you choose, build and run the right technology.</h2>
         </div>
         <p>
-          EffectX helps teams move from scattered processes and underpowered tools
-          to focused systems that match the business. We can help at the strategy
-          stage, build the product, integrate existing tools and keep it running.
+          Based in Perth, Western Australia, EffectX works with businesses that
+          need practical technology help. We can plan the work, build the system,
+          connect your tools and keep it running.
         </p>
       </section>
 
@@ -62,10 +61,10 @@ export default function Home() {
       <section className="section dark-section">
         <div className="section-heading">
           <p className="eyebrow">Our Work</p>
-          <h2>Examples of systems and products we build.</h2>
+          <h2>Examples of our work.</h2>
         </div>
         <div className="work-grid">
-          {work.slice(0, 3).map((item) => (
+          {work.map((item) => (
             <article className="work-card" key={item.name}>
               <p>{item.type}</p>
               <h3>{item.name}</h3>
@@ -79,7 +78,7 @@ export default function Home() {
       <section className="section process-section">
         <div className="section-heading">
           <p className="eyebrow">How we work</p>
-          <h2>Clear thinking before code, practical delivery after.</h2>
+          <h2>A simple process that keeps the work clear.</h2>
         </div>
         <div className="process-grid">
           {processSteps.map(({ title, text, Icon }) => (
@@ -95,7 +94,7 @@ export default function Home() {
       <section className="section split">
         <div>
           <p className="eyebrow">Why EffectX</p>
-          <h2>Senior, pragmatic help for real business constraints.</h2>
+          <h2>Practical help for real business problems.</h2>
         </div>
         <ul className="check-list">
           {reasons.map((reason) => (
@@ -108,8 +107,8 @@ export default function Home() {
       </section>
 
       <section className="cta-section">
-        <p className="eyebrow">Ready when the problem is real</p>
-        <h2>Bring the workflow, the idea or the messy system. We’ll help turn it into something useful.</h2>
+        <p className="eyebrow">Start here</p>
+        <h2>Tell us what you want to fix or build. We’ll help shape the next step.</h2>
         <Link className="primary-button" href="/contact">
           Contact EffectX <ArrowRight size={18} />
         </Link>

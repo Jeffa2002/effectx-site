@@ -33,44 +33,44 @@ export type WorkItem = {
 export const services: Service[] = [
   {
     title: "Bespoke Applications",
-    summary: "Custom business platforms built around the way your team actually works.",
+    summary: "Custom software built around the way your team works.",
     detail:
-      "We design and build internal tools, customer portals, workflow systems and reporting platforms that replace spreadsheets, manual handoffs and disconnected SaaS products.",
+      "We build portals, internal tools, workflow systems and dashboards that replace spreadsheets and manual handoffs.",
     Icon: Code2,
   },
   {
     title: "Websites & Digital Presence",
-    summary: "Fast, credible websites for businesses, products and specialist services.",
+    summary: "Clear, professional websites for businesses and products.",
     detail:
-      "From simple company sites to product-led web experiences, we focus on clear positioning, accessible design, search-friendly structure and maintainable delivery.",
+      "We create fast websites with simple messaging, strong design, search-friendly pages and easy maintenance.",
     Icon: Globe2,
   },
   {
     title: "Systems Integration",
-    summary: "Connect the tools you already use so data moves without duplicate entry.",
+    summary: "Connect your tools so information moves without double handling.",
     detail:
-      "We integrate CRMs, billing tools, document workflows, reporting databases, cloud services and line-of-business systems with pragmatic automation.",
+      "We link CRMs, billing tools, document workflows, cloud services and reporting systems.",
     Icon: Workflow,
   },
   {
     title: "Data & Reporting",
-    summary: "Decision-ready dashboards, data pipelines and operational reporting.",
+    summary: "Useful dashboards and reports your team can trust.",
     detail:
-      "We turn scattered business data into reliable views for owners, managers and teams, with governance and auditability built in from the start.",
+      "We turn scattered data into clear views for owners, managers and teams.",
     Icon: BarChart3,
   },
   {
     title: "Cloud & Infrastructure",
-    summary: "Deployments, hosting, observability and security that suit the size of the job.",
+    summary: "Hosting, deployments and monitoring sized to the job.",
     detail:
-      "We can run lean managed hosting, improve existing environments, automate deployments and keep production systems observable and recoverable.",
+      "We set up lean hosting, automated deployments, monitoring and recovery for production systems.",
     Icon: Cloud,
   },
   {
     title: "Technology Problem Solving",
-    summary: "Short, focused engagements to untangle messy operational technology problems.",
+    summary: "Focused help when the problem is messy or unclear.",
     detail:
-      "When the problem is unclear, we map the workflow, identify constraints, prototype options and ship the smallest useful fix before complexity grows.",
+      "We map the issue, test options and ship the smallest useful fix before the project gets too large.",
     Icon: Wrench,
   },
 ];
@@ -78,66 +78,50 @@ export const services: Service[] = [
 export const work: WorkItem[] = [
   {
     name: "Projenta",
-    type: "Project and operations platform",
+    type: "Project platform",
     href: "https://projenta.io",
     summary:
-      "A product ecosystem for project delivery, operational visibility and business process management.",
-    points: ["Product strategy", "Web application", "Secure deployment"],
+      "A platform for project delivery, team visibility and business process management.",
+    points: ["Product planning", "Web application", "Secure hosting"],
   },
   {
     name: "Crossbench",
-    type: "Decision and evaluation tooling",
+    type: "Decision support",
     href: "https://crossbench.io",
     summary:
-      "A structured platform for comparing options, reviewing trade-offs and supporting better decisions.",
-    points: ["Application design", "Evaluation workflows", "Data modelling"],
-  },
-  {
-    name: "CRM8",
-    type: "Business CRM and automation",
-    href: "https://crm8.effectx.com.au",
-    summary:
-      "A practical CRM environment focused on relationship tracking, operational automation and reporting.",
-    points: ["CRM workflows", "Automation", "Business reporting"],
-  },
-  {
-    name: "YieldDock",
-    type: "Property document intelligence",
-    href: "https://yielddock.effectx.com.au",
-    summary:
-      "A document intake and review workflow for rental statements, evidence, extracted fields and ledger-ready approvals.",
-    points: ["OCR workflows", "Review queues", "Financial evidence handling"],
+      "A tool for comparing options, reviewing trade-offs and making better decisions.",
+    points: ["Application design", "Review workflows", "Data structure"],
   },
 ];
 
 export const processSteps = [
   {
     title: "Understand the work",
-    text: "We map the actual business process, decision points, data sources and pain points before recommending a build.",
+    text: "We learn how the work happens now, what slows it down and what needs to change.",
     Icon: FileStack,
   },
   {
     title: "Design the useful version",
-    text: "We define the workflows, screens and integrations needed for a credible first release without loading the project with theatre.",
+    text: "We plan the screens, workflows and integrations needed for a useful first version.",
     Icon: Building2,
   },
   {
     title: "Build and iterate",
-    text: "We ship in practical stages, test against real usage and keep the implementation maintainable.",
+    text: "We build in stages, test with real use and keep the system easy to maintain.",
     Icon: Database,
   },
   {
     title: "Operate with confidence",
-    text: "We deploy, monitor and improve the system so it remains useful after launch.",
+    text: "We deploy, monitor and improve the system after launch.",
     Icon: ShieldCheck,
   },
 ];
 
 export const reasons = [
-  "Business-first discovery before build decisions",
-  "Pragmatic delivery across design, software and infrastructure",
-  "Direct communication with the people doing the work",
-  "Production-minded engineering from the first release",
+  "We start with the business problem",
+  "We keep the build practical and focused",
+  "You deal directly with the people doing the work",
+  "We build for real use, not just launch day",
 ];
 
 export const navLinks = [

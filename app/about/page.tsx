@@ -6,7 +6,7 @@ const { CheckCircle2 } = icons;
 export const metadata = {
   title: "About",
   description:
-    "About EffectX, a technology consulting partner for bespoke applications, websites and business technology problem solving.",
+    "About EffectX, a Perth technology consulting business for custom software, websites and practical technology support.",
 };
 
 export default function AboutPage() {
@@ -14,23 +14,23 @@ export default function AboutPage() {
     <main>
       <section className="page-hero">
         <p className="eyebrow">About EffectX</p>
-        <h1>We help businesses turn technology problems into practical systems.</h1>
+        <h1>We help businesses use technology in a practical way.</h1>
         <p>
-          EffectX works where business process, software and operations meet. We
-          care about understanding the work first, then building the smallest
-          durable system that creates real leverage.
+          EffectX is based in Perth, Western Australia. We build custom software,
+          websites and connected systems for businesses that want clearer,
+          simpler ways to work.
         </p>
       </section>
 
       <section className="section split">
         <div>
           <p className="eyebrow">Approach</p>
-          <h2>Close to the problem, clear about the build.</h2>
+          <h2>We start by understanding the problem.</h2>
         </div>
         <p>
-          We are useful when a team knows something needs to improve but the right
-          technical path is not obvious. We help define the workflow, choose the
-          architecture, ship the application and keep the production setup grounded.
+          We are useful when you know something needs to improve, but the right
+          technology path is not obvious. We help define the work, choose the
+          right approach, build the system and keep it running.
         </p>
       </section>
 

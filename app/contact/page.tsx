@@ -6,7 +6,7 @@ const { ArrowRight, LifeBuoy } = icons;
 export const metadata = {
   title: "Contact",
   description:
-    "Contact EffectX about bespoke applications, websites, systems integration and technology consulting.",
+    "Contact EffectX in Perth, Western Australia about custom software, websites and technology consulting.",
 };
 
 export default function ContactPage() {
@@ -14,21 +14,20 @@ export default function ContactPage() {
     <main>
       <section className="page-hero contact-hero">
         <p className="eyebrow">Contact</p>
-        <h1>Tell us what you are trying to fix, build or connect.</h1>
+        <h1>Tell us what you want to fix, build or connect.</h1>
         <p>
-          The best starting point is a short conversation about the business
-          workflow, the users, the existing systems and the outcome you need.
+          We are based in Perth, Western Australia. Send a short note about your
+          business, the problem and what you want to achieve.
         </p>
       </section>
 
       <section className="section contact-grid">
         <article className="contact-panel">
           <LifeBuoy size={28} />
-          <h2>Start with a conversation</h2>
+          <h2>Start with a short message</h2>
           <p>
-            Send a short note about the problem, product or website you want to
-            discuss. Include any deadlines, systems involved and what success
-            would look like.
+            Tell us what is not working, what you need built and whether there
+            are any systems or deadlines we should know about.
           </p>
           <a className="primary-button" href="mailto:hello@effectx.com.au">
             Email EffectX <ArrowRight size={18} />
@@ -51,8 +50,12 @@ export default function ContactPage() {
               </dd>
             </div>
             <div>
+              <dt>Location</dt>
+              <dd>Perth, Western Australia</dd>
+            </div>
+            <div>
               <dt>Typical work</dt>
-              <dd>Bespoke apps, websites, integrations and reporting systems.</dd>
+              <dd>Custom software, websites, integrations and reporting.</dd>
             </div>
           </dl>
         </aside>

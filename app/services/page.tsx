@@ -6,7 +6,7 @@ const { ArrowRight } = icons;
 export const metadata = {
   title: "Services",
   description:
-    "Bespoke applications, websites, integrations, reporting, cloud infrastructure and technology problem solving from EffectX.",
+    "Custom software, websites, integrations, reporting and technology support from EffectX in Perth, Western Australia.",
 };
 
 export default function ServicesPage() {
@@ -14,10 +14,10 @@ export default function ServicesPage() {
     <main>
       <section className="page-hero">
         <p className="eyebrow">Services</p>
-        <h1>Technology services for businesses that need working systems, not theatre.</h1>
+        <h1>Technology services for businesses that need clear, useful systems.</h1>
         <p>
-          We combine consulting, product design, software engineering and production
-          operations so the result is useful beyond launch day.
+          We help you plan, build and run websites, applications and connected
+          tools that support the way your business works.
         </p>
       </section>
 
@@ -35,7 +35,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="cta-section compact">
-        <h2>Need a system mapped before you commit to a build?</h2>
+        <h2>Need help turning an idea or problem into a clear plan?</h2>
         <Link className="primary-button" href="/contact">
           Book a discovery call <ArrowRight size={18} />
         </Link>
