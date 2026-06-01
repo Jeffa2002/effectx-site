@@ -98,21 +98,25 @@ export const processSteps = [
   {
     title: "Understand the work",
     text: "We learn how the work happens now, what slows it down and what needs to change.",
+    outcome: "Clear problem map",
     Icon: FileStack,
   },
   {
     title: "Design the useful version",
     text: "We plan the screens, workflows and integrations needed for a useful first version.",
+    outcome: "Practical build plan",
     Icon: Building2,
   },
   {
     title: "Build and iterate",
     text: "We build in stages, test with real use and keep the system easy to maintain.",
+    outcome: "Working system",
     Icon: Database,
   },
   {
     title: "Operate with confidence",
     text: "We deploy, monitor and improve the system after launch.",
+    outcome: "Supported launch",
     Icon: ShieldCheck,
   },
 ];

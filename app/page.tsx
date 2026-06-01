@@ -80,12 +80,18 @@ export default function Home() {
           <p className="eyebrow">How we work</p>
           <h2>A simple process that keeps the work clear.</h2>
         </div>
-        <div className="process-grid">
-          {processSteps.map(({ title, text, Icon }) => (
-            <article key={title}>
-              <Icon size={24} />
-              <h3>{title}</h3>
-              <p>{text}</p>
+        <div className="process-flow">
+          {processSteps.map(({ title, text, outcome, Icon }, index) => (
+            <article className="process-step" key={title}>
+              <div className="process-node">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <Icon size={25} />
+              </div>
+              <div className="process-card">
+                <h3>{title}</h3>
+                <p>{text}</p>
+                <strong>{outcome}</strong>
+              </div>
             </article>
           ))}
         </div>
