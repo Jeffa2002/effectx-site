@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  Bug,
   ClipboardCheck,
   Eye,
   FileSearch,
@@ -10,10 +9,8 @@ import {
   LockKeyhole,
   Scale,
   ServerCog,
-  SprayCan,
   ShieldCheck,
   Siren,
-  VenetianMask,
 } from "lucide-react";
 
 const securityChecks = [
@@ -103,6 +100,12 @@ export default function SecurityPage() {
           </div>
 
           <div className="security-visual" aria-hidden="true">
+            <div className="security-perimeter">
+              <span className="perimeter-ring perimeter-ring-one" />
+              <span className="perimeter-ring perimeter-ring-two" />
+              <span className="perimeter-pulse" />
+            </div>
+
             <div className="security-device">
               <div className="device-screen">
                 <Laptop size={76} />
@@ -113,25 +116,18 @@ export default function SecurityPage() {
               <div className="device-base" />
             </div>
 
-            <div className="threat-bug">
-              <Bug size={34} />
+            <div className="trust-lock">
+              <LockKeyhole size={42} />
             </div>
 
-            <div className="threat-hacker">
-              <VenetianMask size={34} />
+            <div className="threat-signal threat-signal-one">
+              <span />
             </div>
-
-            <div className="cyber-monster">
-              <span className="monster-eye monster-eye-left" />
-              <span className="monster-eye monster-eye-right" />
-              <span className="monster-mouth" />
+            <div className="threat-signal threat-signal-two">
+              <span />
             </div>
-
-            <div className="cyber-spray">
-              <SprayCan size={42} />
-              <span className="spray-cloud spray-cloud-one" />
-              <span className="spray-cloud spray-cloud-two" />
-              <span className="spray-cloud spray-cloud-three" />
+            <div className="threat-signal threat-signal-three">
+              <span />
             </div>
 
             <div className="security-shield">
