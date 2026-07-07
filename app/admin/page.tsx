@@ -1,6 +1,15 @@
-import { adminMetrics, adminQueue, icons, webViews } from "../data";
+import {
+  adminMetrics,
+  adminQueue,
+  contentPerformance,
+  icons,
+  journeyPaths,
+  sourceBreakdown,
+  trafficTrend,
+  webViews,
+} from "../data";
 
-const { LayoutDashboard } = icons;
+const { Activity, LayoutDashboard, Sparkles } = icons;
 
 export const metadata = {
   title: "Admin",
@@ -27,11 +36,11 @@ export default function AdminPage() {
         <div className="admin-toolbar">
           <div>
             <p className="eyebrow">Overview</p>
-            <h2>Web performance and publishing queue.</h2>
+            <h2>Usage analysis, content performance and commercial next actions.</h2>
           </div>
           <span className="admin-mode">
             <LayoutDashboard size={18} />
-            Static preview
+            Protected admin
           </span>
         </div>
 
@@ -58,7 +67,8 @@ export default function AdminPage() {
                 <span>Status</span>
                 <span>Visitors</span>
                 <span>Conversion</span>
-                <span>Owner</span>
+                <span>Bounce</span>
+                <span>Next action</span>
               </div>
               {webViews.map((view) => (
                 <div className="web-view-row" key={view.path}>
@@ -69,7 +79,8 @@ export default function AdminPage() {
                   <span>{view.status}</span>
                   <span>{view.visitors}</span>
                   <span>{view.conversion}</span>
-                  <span>{view.owner}</span>
+                  <span>{view.bounce}</span>
+                  <span>{view.nextAction}</span>
                 </div>
               ))}
             </div>
@@ -90,6 +101,84 @@ export default function AdminPage() {
               ))}
             </div>
           </aside>
+        </div>
+
+        <div className="admin-analytics-grid">
+          <section className="admin-panel">
+            <div className="panel-heading">
+              <h3>Traffic trend</h3>
+              <span>30 days</span>
+            </div>
+            <div className="trend-list">
+              {trafficTrend.map((item) => (
+                <article key={item.period}>
+                  <span>{item.period}</span>
+                  <strong>{item.sessions}</strong>
+                  <p>{item.leads} leads</p>
+                  <em>{item.conversion}</em>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="admin-panel">
+            <div className="panel-heading">
+              <h3>Sources</h3>
+              <span>Quality</span>
+            </div>
+            <div className="compact-table">
+              {sourceBreakdown.map((source) => (
+                <div key={source.source}>
+                  <strong>{source.source}</strong>
+                  <span>{source.sessions}</span>
+                  <span>{source.share}</span>
+                  <em>{source.quality}</em>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <div className="admin-layout deeper-admin-layout">
+          <section className="admin-panel">
+            <div className="panel-heading">
+              <h3>User journeys</h3>
+              <span>Entry to enquiry</span>
+            </div>
+            <div className="journey-list">
+              {journeyPaths.map((journey) => (
+                <article key={journey.path}>
+                  <Activity size={20} />
+                  <div>
+                    <h4>{journey.path}</h4>
+                    <p>{journey.note}</p>
+                  </div>
+                  <strong>{journey.users}</strong>
+                  <span>{journey.conversion}</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="admin-panel">
+            <div className="panel-heading">
+              <h3>Content performance</h3>
+              <span>Proof engine</span>
+            </div>
+            <div className="content-signal-list">
+              {contentPerformance.map((item) => (
+                <article key={item.title}>
+                  <Sparkles size={18} />
+                  <div>
+                    <span>{item.type}</span>
+                    <h4>{item.title}</h4>
+                    <p>{item.signal}</p>
+                  </div>
+                  <strong>{item.views}</strong>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
     </main>

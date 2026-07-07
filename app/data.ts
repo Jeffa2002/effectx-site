@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  Activity,
   BarChart3,
   BookOpen,
   Building2,
@@ -16,8 +17,9 @@ import {
   LucideIcon,
   MessageSquare,
   Newspaper,
-  PencilLine,
+  SearchCheck,
   ShieldCheck,
+  Sparkles,
   TrendingUp,
   Users,
   Workflow,
@@ -63,40 +65,42 @@ export type WebView = {
   visitors: string;
   conversion: string;
   owner: string;
+  bounce?: string;
+  nextAction?: string;
 };
 
 export const services: Service[] = [
   {
-    title: "Bespoke Applications",
-    summary: "Custom software built around the way your team works.",
+    title: "Replace Spreadsheet Workflows",
+    summary: "Custom tools for the messy work that has outgrown manual tracking.",
     detail:
       "We build portals, internal tools, workflow systems and dashboards that replace spreadsheets and manual handoffs.",
     Icon: Code2,
   },
   {
-    title: "Websites & Digital Presence",
-    summary: "Clear, professional websites for businesses and products.",
+    title: "Managed Websites",
+    summary: "Public sites connected to content, analytics and conversion review.",
     detail:
       "We create fast websites with simple messaging, strong design, search-friendly pages and easy maintenance.",
     Icon: Globe2,
   },
   {
-    title: "Systems Integration",
-    summary: "Connect your tools so information moves without double handling.",
+    title: "Connect Business Systems",
+    summary: "Move data between tools without double handling or blind spots.",
     detail:
       "We link CRMs, billing tools, document workflows, cloud services and reporting systems.",
     Icon: Workflow,
   },
   {
-    title: "Data & Reporting",
-    summary: "Useful dashboards and reports your team can trust.",
+    title: "Operating Dashboards",
+    summary: "Management views that show what changed and what needs attention.",
     detail:
       "We turn scattered data into clear views for owners, managers and teams.",
     Icon: BarChart3,
   },
   {
-    title: "Cloud & Infrastructure",
-    summary: "Hosting, deployments and monitoring sized to the job.",
+    title: "Cloud Operations",
+    summary: "Lean hosting, deploys, monitoring and recovery for real systems.",
     detail:
       "We set up lean hosting, automated deployments, monitoring and recovery for production systems.",
     Icon: Cloud,
@@ -113,19 +117,34 @@ export const services: Service[] = [
 export const work: WorkItem[] = [
   {
     name: "Projenta",
-    type: "Project platform",
+    type: "Operating platform",
     href: "https://projenta.io",
     summary:
-      "A platform for project delivery, team visibility and business process management.",
-    points: ["Product planning", "Web application", "Secure hosting"],
+      "A project and operations platform with admin analytics, delivery visibility and secure production hosting.",
+    points: ["Product planning", "Admin analytics", "Secure hosting"],
   },
   {
     name: "Crossbench",
-    type: "Decision support",
+    type: "Decision intelligence",
     href: "https://crossbench.io",
     summary:
-      "A tool for comparing options, reviewing trade-offs and making better decisions.",
-    points: ["Application design", "Review workflows", "Data structure"],
+      "A decision-support product with structured research, bill intelligence, support workflows and operational reporting.",
+    points: ["Application design", "AI workflows", "Usage analysis"],
+  },
+];
+
+export const proofPoints = [
+  {
+    title: "Admin dashboards",
+    text: "Usage, content, enquiries and action queues for sites and products that need regular review.",
+  },
+  {
+    title: "AI operations",
+    text: "Quiet monitoring, incident summaries, repo intelligence and daily founder briefings.",
+  },
+  {
+    title: "Secure launches",
+    text: "Protected admin areas, backups, restore checks, SSL monitoring and deployment hygiene.",
   },
 ];
 
@@ -174,28 +193,28 @@ export const navLinks = [
 
 export const adminMetrics: AdminMetric[] = [
   {
-    label: "Tracked web views",
-    value: "8",
-    delta: "+2 this quarter",
+    label: "Sessions",
+    value: "1,284",
+    delta: "+18% last 30 days",
     Icon: Eye,
   },
   {
-    label: "Qualified enquiries",
+    label: "Qualified leads",
     value: "14",
-    delta: "+18% month on month",
+    delta: "5 from service pages",
     Icon: MessageSquare,
   },
   {
-    label: "Top page engagement",
-    value: "62%",
-    delta: "Services page",
+    label: "Contact conversion",
+    value: "3.8%",
+    delta: "+0.7 pts vs previous",
     Icon: TrendingUp,
   },
   {
-    label: "Draft content",
-    value: "3",
-    delta: "Insights queue",
-    Icon: PencilLine,
+    label: "Pages needing work",
+    value: "4",
+    delta: "2 stale, 1 high exit, 1 draft",
+    Icon: SearchCheck,
   },
 ];
 
@@ -207,6 +226,8 @@ export const webViews: WebView[] = [
     visitors: "1,284",
     conversion: "3.8%",
     owner: "Marketing",
+    bounce: "41%",
+    nextAction: "Test stronger proof strip above services",
   },
   {
     name: "Services",
@@ -215,6 +236,8 @@ export const webViews: WebView[] = [
     visitors: "842",
     conversion: "5.6%",
     owner: "Sales",
+    bounce: "34%",
+    nextAction: "Split service copy into use-case pages",
   },
   {
     name: "Security",
@@ -223,6 +246,8 @@ export const webViews: WebView[] = [
     visitors: "418",
     conversion: "2.9%",
     owner: "Operations",
+    bounce: "47%",
+    nextAction: "Add managed security checklist CTA",
   },
   {
     name: "Insights",
@@ -231,17 +256,76 @@ export const webViews: WebView[] = [
     visitors: "New",
     conversion: "Baseline",
     owner: "Content",
+    bounce: "Baseline",
+    nextAction: "Publish reporting and admin dashboard article",
+  },
+];
+
+export const trafficTrend = [
+  { period: "Week 1", sessions: "248", leads: "2", conversion: "2.8%" },
+  { period: "Week 2", sessions: "291", leads: "3", conversion: "3.1%" },
+  { period: "Week 3", sessions: "334", leads: "4", conversion: "3.7%" },
+  { period: "Week 4", sessions: "411", leads: "5", conversion: "4.2%" },
+];
+
+export const sourceBreakdown = [
+  { source: "Direct / brand", sessions: "486", share: "38%", quality: "High" },
+  { source: "Organic search", sessions: "354", share: "28%", quality: "Medium" },
+  { source: "Referrals", sessions: "231", share: "18%", quality: "High" },
+  { source: "Social / shared", sessions: "126", share: "10%", quality: "Watch" },
+  { source: "Unclassified", sessions: "87", share: "6%", quality: "Clean up" },
+];
+
+export const journeyPaths = [
+  {
+    path: "Home -> Services -> Contact",
+    users: "112",
+    conversion: "8.1%",
+    note: "Best-performing commercial path",
+  },
+  {
+    path: "Insights -> Services -> Contact",
+    users: "34",
+    conversion: "5.9%",
+    note: "Needs more article-to-service CTAs",
+  },
+  {
+    path: "Security -> Contact",
+    users: "28",
+    conversion: "3.6%",
+    note: "Intent is good but page needs clearer offer",
+  },
+];
+
+export const contentPerformance = [
+  {
+    title: "Your website should be part of the operating system",
+    type: "Insight",
+    views: "146",
+    signal: "Strong fit for admin-dashboard service",
+  },
+  {
+    title: "Security basics for lean web applications",
+    type: "Insight",
+    views: "92",
+    signal: "Add checklist download or consult CTA",
+  },
+  {
+    title: "Crossbench work sample",
+    type: "Case study",
+    views: "Draft",
+    signal: "High priority proof asset",
   },
 ];
 
 export const adminQueue = [
   {
-    title: "Publish the first AI automation case note",
+    title: "Publish the admin analytics case note",
     type: "Insight",
     status: "Draft",
   },
   {
-    title: "Refresh Crossbench work sample",
+    title: "Expand Projenta and Crossbench proof cards",
     type: "Case study",
     status: "Review",
   },
@@ -305,5 +389,7 @@ export const icons = {
   LayoutDashboard,
   LifeBuoy,
   Newspaper,
+  Activity,
+  Sparkles,
   Users,
 };

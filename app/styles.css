@@ -107,9 +107,9 @@ img {
 }
 
 .hero {
-  min-height: min(820px, calc(100vh - 130px));
+  min-height: min(700px, calc(100vh - 250px));
   display: block;
-  padding: 90px clamp(20px, 6vw, 88px) 62px;
+  padding: 56px clamp(20px, 6vw, 88px) 38px;
   color: #fff;
   background:
     linear-gradient(90deg, rgba(6, 36, 49, 0.94), rgba(6, 36, 49, 0.68) 52%, rgba(6, 36, 49, 0.42)),
@@ -117,7 +117,7 @@ img {
 }
 
 .hero-layout {
-  min-height: calc(min(820px, calc(100vh - 130px)) - 152px);
+  min-height: calc(min(700px, calc(100vh - 250px)) - 94px);
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(340px, 0.72fr);
   gap: clamp(34px, 6vw, 86px);
@@ -299,7 +299,7 @@ p {
 
 h1 {
   margin-bottom: 24px;
-  font-size: clamp(2.45rem, 7vw, 5.15rem);
+  font-size: clamp(2.45rem, 6vw, 4.55rem);
   line-height: 0.98;
   letter-spacing: 0;
   max-width: 920px;
@@ -370,6 +370,37 @@ h3 {
 
 .service-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.proof-section {
+  padding-top: 54px;
+  padding-bottom: 54px;
+  background: #fff;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.proof-grid article {
+  min-height: 168px;
+  padding: 22px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.proof-grid span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-weight: 840;
+}
+
+.proof-grid p {
+  color: var(--muted);
 }
 
 .service-grid.large {
@@ -740,9 +771,9 @@ h3 {
 }
 
 .web-view-row {
-  min-width: 760px;
+  min-width: 980px;
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr 0.7fr 0.7fr 0.8fr;
+  grid-template-columns: 1.25fr 0.58fr 0.58fr 0.64fr 0.52fr 1.35fr;
   gap: 14px;
   align-items: center;
   padding: 15px 0;
@@ -784,6 +815,121 @@ h3 {
 .queue-list h4 {
   margin: 7px 0;
   font-size: 1rem;
+}
+
+.admin-analytics-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.trend-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.trend-list article {
+  min-height: 136px;
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.trend-list span,
+.compact-table em,
+.journey-list span,
+.content-signal-list span {
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 820;
+  text-transform: uppercase;
+}
+
+.trend-list strong {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.trend-list p,
+.journey-list p,
+.content-signal-list p {
+  color: var(--muted);
+}
+
+.trend-list em {
+  color: var(--blue);
+  font-style: normal;
+  font-weight: 820;
+}
+
+.compact-table {
+  display: grid;
+  overflow-x: auto;
+}
+
+.compact-table div {
+  min-width: 620px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.45fr 0.45fr 0.56fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.compact-table span {
+  color: var(--muted);
+  font-weight: 720;
+}
+
+.deeper-admin-layout {
+  margin-top: 22px;
+}
+
+.journey-list,
+.content-signal-list {
+  display: grid;
+  gap: 12px;
+}
+
+.journey-list article,
+.content-signal-list article {
+  display: grid;
+  align-items: start;
+  gap: 12px;
+  padding: 15px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.journey-list article {
+  grid-template-columns: 28px minmax(0, 1fr) auto auto;
+}
+
+.content-signal-list article {
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+}
+
+.journey-list svg,
+.content-signal-list svg {
+  color: var(--blue);
+}
+
+.journey-list h4,
+.content-signal-list h4 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+}
+
+.content-signal-list strong {
+  color: var(--ink);
 }
 
 .insights-layout {
@@ -1570,6 +1716,7 @@ h3 {
   .service-grid,
   .service-grid.large,
   .work-grid,
+  .proof-grid,
   .security-grid,
   .standards-grid,
   .process-flow {
@@ -1679,6 +1826,7 @@ h3 {
   .case-grid,
   .contact-grid,
   .admin-layout,
+  .admin-analytics-grid,
   .insights-layout,
   .site-footer,
   .cta-section.compact {
@@ -1728,6 +1876,7 @@ h3 {
   .service-grid,
   .service-grid.large,
   .work-grid,
+  .proof-grid,
   .metric-grid,
   .security-grid,
   .standards-grid,
@@ -1735,8 +1884,17 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .trend-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .admin-toolbar {
     display: grid;
+  }
+
+  .journey-list article,
+  .content-signal-list article {
+    grid-template-columns: 1fr;
   }
 
   .process-step {

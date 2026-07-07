@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { icons, processSteps, reasons, services, work } from "./data";
+import { icons, processSteps, proofPoints, reasons, services, work } from "./data";
 
 const { ArrowRight, CheckCircle2 } = icons;
 
@@ -10,10 +10,11 @@ export default function Home() {
         <div className="hero-layout">
           <div className="hero-content">
             <p className="eyebrow">Perth, Western Australia</p>
-            <h1>EffectX builds custom software and websites for business.</h1>
+            <h1>EffectX builds and operates practical business technology.</h1>
             <p className="hero-copy">
-              We help businesses solve problems with clear websites, custom
-              applications and connected systems that make daily work easier.
+              One of Equim8 Group&apos;s major operating companies, EffectX
+              builds websites, applications, automations and admin dashboards
+              that help real businesses see what is working.
             </p>
             <div className="hero-actions">
               <Link className="primary-button" href="/contact">
@@ -54,13 +55,28 @@ export default function Home() {
       <section className="section split intro-band">
         <div>
           <p className="eyebrow">What we do</p>
-          <h2>We help you choose, build and run the right technology.</h2>
+          <h2>We help you choose, build, measure and run the right technology.</h2>
         </div>
         <p>
           Based in Perth, Western Australia, EffectX works with businesses that
           need practical technology help. We can plan the work, build the system,
-          connect your tools and keep it running.
+          connect your tools, measure usage and keep the important parts running.
         </p>
+      </section>
+
+      <section className="section proof-section">
+        <div className="section-heading">
+          <p className="eyebrow">Proof</p>
+          <h2>What good looks like after launch.</h2>
+        </div>
+        <div className="proof-grid">
+          {proofPoints.map((point) => (
+            <article key={point.title}>
+              <span>{point.title}</span>
+              <p>{point.text}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="section">
