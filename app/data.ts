@@ -338,6 +338,26 @@ export const adminQueue = [
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "useful-website-admin-dashboard",
+    title: "What a useful website admin dashboard should tell you",
+    category: "Web strategy",
+    date: "2026-08-11",
+    readTime: "6 min read",
+    summary:
+      "The small set of signals that turns website analytics into clear, repeatable decisions for the business.",
+    body: [
+      "Most website dashboards are good at producing numbers and poor at helping someone decide what to do next. Sessions, impressions and bounce rates can describe activity, but they rarely explain whether the site is attracting the right people, helping them move forward or creating useful work for the business.",
+      "A useful admin dashboard starts with decisions, not charts. It should help an owner or manager answer three questions quickly: what changed, does it matter, and what should we do about it? If a metric cannot influence a decision, it probably does not deserve a prominent place on the screen.",
+      "Begin with outcomes. For a service business, that might mean qualified enquiries, booked calls or completed quote requests. For a software product, it could be registrations that reach a meaningful activation step. Show the outcome alongside the pages, campaigns and journeys that contributed to it. A raw traffic increase is less valuable than knowing that a particular service page brought three suitable enquiries.",
+      "Then show the path people took. A small list of common journeys—such as Home to Services to Contact—often reveals more than a large traffic report. It can show where interested visitors continue, where they leave and which insight articles introduce people to a commercial service. The goal is not to track every click. It is to make the important routes visible.",
+      "Content needs an operating view too. Flag pages with falling traffic, high exits, stale claims or missing calls to action. Keep drafts and review dates in the same place. This turns content from an occasional redesign project into a manageable queue of small improvements.",
+      "Trust matters as much as presentation. The dashboard should state its reporting period, data source and definition of a conversion. Internal visits, bots, duplicate events and test submissions should be filtered where practical. When a number is estimated or incomplete, say so. A modest dashboard with dependable definitions is more useful than a polished one that changes its story every week.",
+      "Avoid filling the screen with vanity metrics. Total lifetime page views, social follower counts and a single site-wide bounce rate can look impressive without guiding action. Keep diagnostic metrics available for investigation, but give the main view to outcomes, meaningful journeys, exceptions and work that needs attention.",
+      "The final ingredient is rhythm. Review the dashboard on a regular schedule, choose one or two changes, assign an owner and record what you expect to happen. At the next review, compare the result. That simple loop—observe, decide, change and measure—is what makes the website part of the business operating system rather than a brochure that slowly goes stale.",
+      "The best dashboard is not the one with the most data. It is the one that helps the team notice a meaningful change and confidently take the next useful action.",
+    ],
+  },
+  {
     slug: "small-business-ai-ops",
     title: "What small businesses should automate before they chase AI",
     category: "Automation",
