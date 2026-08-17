@@ -336,7 +336,71 @@ export const adminQueue = [
   },
 ];
 
-export const blogPosts: BlogPost[] = [
+const allBlogPosts: BlogPost[] = [
+  {
+    slug: "why-business-dashboards-fail",
+    title: "Why business dashboards fail—and what managers actually need to see",
+    category: "Business systems",
+    date: "2026-09-01",
+    readTime: "7 min read",
+    summary:
+      "A dashboard earns its place when it helps someone notice a change, understand why it matters and decide what to do next.",
+    body: [
+      "Business dashboards often fail in a surprisingly polished way. The charts look professional, the data refreshes automatically and everyone agrees that visibility is important. Then the dashboard becomes another tab nobody opens unless a meeting is already underway.",
+      "The usual problem is not the visual design. It is that the dashboard was built around available data instead of management decisions. A system can report dozens of accurate measures and still leave a manager unable to answer the questions that matter: what changed, where is the risk, who owns the next step and does anything need attention today?",
+      "A useful dashboard begins with a decision. Before choosing charts, define the action each view is meant to support. A sales dashboard might help a manager find stalled opportunities. An operations dashboard might expose overdue work, blocked handoffs or an unusual rise in rework. A service dashboard might show whether response times are slipping before customers start complaining. If no decision changes when a measure moves, that measure probably belongs in a detailed report rather than the main view.",
+      "Too many dashboards also confuse activity with progress. Emails sent, tickets opened and tasks created are easy to count, but they do not necessarily show whether the business is moving forward. Managers usually need a small combination of outcomes, flow and exceptions: what finished, what is moving through the process, and what has fallen outside the expected range.",
+      "Context is what turns a number into a signal. Revenue of $80,000 might be strong or weak depending on the target, season and stage of the month. Twelve overdue jobs might be normal for a large queue or a serious delivery problem for a small team. Show the comparison that makes the measure understandable: target, previous period, normal range or agreed service level. Avoid decorative percentage changes that have no operational meaning.",
+      "Ownership matters just as much. A red indicator without an owner creates anxiety rather than action. When something needs attention, the dashboard should make the next step clear: investigate a failed integration, contact a customer, review an approval, or assign capacity. Where practical, connect the signal to the underlying record so the manager can move from noticing the issue to resolving it without beginning a separate search.",
+      "Trust can quietly destroy adoption. If people regularly find duplicate records, unexplained gaps or totals that disagree with another system, they stop relying on the dashboard even after the data is fixed. State where the data comes from, when it was last refreshed and how important measures are defined. A modest view with dependable numbers will outperform an ambitious one that requires an explanation every week.",
+      "Different people also need different levels of detail. An owner may need a weekly view of cash, demand, delivery and risk. A team leader may need today's workload and exceptions. A person doing the work needs the actual queue. Trying to serve all three with one crowded screen usually serves none of them. Start with a clear audience and allow deeper investigation only where it supports that audience's decisions.",
+      "The best test is a short management conversation. Put the dashboard in front of the people who will use it and ask: what do you notice, what would you do, and what question remains unanswered? Their responses reveal more than a long list of requested metrics. Build the smallest view that supports the recurring conversation, use it for several weeks, and remove anything that does not influence action.",
+      "A good dashboard is not a wall of business intelligence. It is a working surface for attention and accountability. It helps managers see the few things that changed, understand whether they matter and confidently choose the next useful action.",
+    ],
+  },
+  {
+    slug: "build-buy-or-connect-business-software",
+    title: "Build, buy or connect? How to choose business software without creating another silo",
+    category: "Business systems",
+    date: "2026-08-25",
+    readTime: "7 min read",
+    summary:
+      "A practical way to decide whether to adopt a product, build a focused tool or connect the systems already doing part of the job.",
+    body: [
+      "A business process starts to hurt, so the search for software begins. One product covers most of the workflow but forces the team to change how it works. A custom build promises a close fit but carries more responsibility. Connecting the existing tools looks smaller, although the gaps between them may be the source of the problem. The wrong choice does not just waste money; it creates another place for information to become trapped.",
+      "The useful question is not whether custom software is better than an off-the-shelf product. It is which parts of the work are standard, which parts make the business distinctive and where the real friction occurs. Most good solutions combine buying, building and connecting rather than treating them as opposing camps.",
+      "Buy when the process is common and the market has already solved it well. Payroll, accounting, email marketing and commodity customer support are rarely good places to recreate mature software. A suitable product brings established controls, regular updates and a community of users. The trade-off is accepting its model of the work. Configuration is healthy; fighting the product at every step is a warning that the fit may be poor.",
+      "Build when the workflow creates a real operational advantage or when the available products consistently miss a critical requirement. A focused internal tool can reflect the language, approvals, calculations and exceptions that matter to the business without carrying hundreds of unused features. Custom does not have to mean a large platform. Often the best build is a narrow layer that makes one important process reliable and leaves standard functions to standard products.",
+      "Connect when the individual systems work but the handoffs do not. If staff copy customer details from a form into a CRM, re-enter approved work into an accounting package or manually assemble a management report, an integration may remove most of the pain without replacing anything. Good connections define which system owns each piece of information, how failures are detected and what happens when records disagree.",
+      "Before choosing, map the workflow from trigger to outcome. Note who performs each step, what information they need, which system holds it and where waiting, copying or correction occurs. This prevents a loud feature request from overshadowing the actual constraint. It also exposes whether the problem is software at all; unclear ownership and inconsistent rules cannot be repaired by adding another application.",
+      "Then assess the decision across five dimensions: fit, time, total cost, control and operating responsibility. Buying is usually faster, but subscriptions, implementation and workarounds still carry costs. Building offers control, but someone must maintain, secure and improve the result. Connecting can be efficient, but the business becomes dependent on APIs and data contracts that may change. Compare the full operating life, not only the initial quote.",
+      "Pay particular attention to data ownership. Decide which system is the source of truth for customers, jobs, invoices and documents. Avoid copying entire databases simply because integration is possible. Move the minimum information needed for the next step, record when the movement succeeds or fails, and make recovery understandable. A connected system without monitoring is merely an invisible manual process.",
+      "A small trial is usually more valuable than a long requirements document. Configure the product for one real workflow, automate one handoff or prototype the narrowest custom screen. Let the people doing the work use it and watch where they hesitate. The evidence will show whether to continue, combine approaches or stop before the commitment grows.",
+      "The goal is not to own more software. It is to create one dependable flow of work with clear ownership and as few unnecessary handoffs as possible. Buy the standard capability, build the part that genuinely needs to fit, and connect only where the connection removes real work or improves visibility.",
+    ],
+  },
+  {
+    slug: "when-spreadsheet-workflow-outgrows-spreadsheet",
+    title: "When has a spreadsheet workflow outgrown the spreadsheet?",
+    category: "Business systems",
+    date: "2026-08-18",
+    readTime: "7 min read",
+    summary:
+      "Five signs that a useful spreadsheet has become a fragile business process—and what to do before commissioning a large system.",
+    body: [
+      "Spreadsheets are among the best business tools ever made. They are fast, flexible and familiar, and they let a capable person turn an unclear process into something useful in an afternoon. Replacing one simply because it looks untidy is usually a mistake.",
+      "The problem begins when the spreadsheet stops being a tool inside the workflow and quietly becomes the workflow itself. More people depend on it, more rules are added, and more important decisions rely on cells that were never designed to carry that responsibility. The question is not whether the spreadsheet is large. It is whether the business can still operate the process reliably.",
+      "The first warning sign is competing versions. Files are copied into email, renamed with dates or initials, and saved in several folders. People spend time asking which version is current or merging changes after two colleagues edited different copies. A shared online sheet can reduce this problem, but it does not automatically create clear ownership or prevent someone from changing a critical formula.",
+      "The second sign is dependence on one person's memory. That person knows which rows need attention, which colours have special meaning and which exceptions must be handled outside the sheet. The process appears documented because the data is visible, but the operating knowledge lives in someone's head. Holidays, staff changes or simple human error can then stop the work.",
+      "The third sign is repeated copying between systems. Information arrives by form or email, moves into the spreadsheet, is re-entered into accounting or CRM software, and is copied again for reporting. Every handoff takes time and creates another chance for a name, amount, status or date to drift. When staff are acting as the integration between otherwise useful systems, there is often a focused automation opportunity.",
+      "The fourth sign is that managers cannot see status without asking around. A spreadsheet may contain every record and still make it difficult to answer basic questions: what is waiting, what is overdue, where is work blocked and who owns the next step? If producing a management view requires an expert to clean, filter and explain the file each week, the business does not yet have dependable visibility.",
+      "The fifth sign is that mistakes or missed handoffs have become costly. An overwritten formula, an unapproved change or a row that was never updated can lead to a missed customer commitment, incorrect invoice or compliance problem. At that point, the process may need permissions, validation, reminders and a history of who changed what—controls that are possible to imitate in a spreadsheet but increasingly difficult to maintain.",
+      "None of these signs automatically justifies a large custom system. Start by cleaning the process. Agree on one owner, one source of truth, consistent fields and a small set of documented rules. Remove duplicated steps and decide which exceptions genuinely need special treatment. Many spreadsheet problems improve dramatically once the underlying workflow becomes clear.",
+      "The next step may be a modest automation rather than a replacement. A form can standardise incoming information. An integration can remove double entry. A scheduled report can give managers a reliable view. Notifications can highlight overdue work without forcing someone to scan every row. These changes preserve what works while testing whether the process is stable enough to formalise.",
+      "A focused internal tool becomes worthwhile when the business needs controlled access, assigned work, dependable status, integrations, audit history or reporting that the spreadsheet cannot provide safely. Build the smallest useful version around the actual workflow. Keep familiar exports where they help, and avoid turning every edge case into a feature before the core path has been used in practice.",
+      "The right progression is usually simple: clean up the spreadsheet, automate the painful handoff, then build only the part that needs stronger control. The aim is not to eliminate spreadsheets. It is to stop asking one spreadsheet—and the person who understands it—to carry more operational risk than either should.",
+    ],
+  },
   {
     slug: "useful-website-admin-dashboard",
     title: "What a useful website admin dashboard should tell you",
@@ -400,6 +464,15 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 ];
+
+const perthToday = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Australia/Perth",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+}).format(new Date());
+
+export const blogPosts = allBlogPosts.filter((post) => post.date <= perthToday);
 
 export const icons = {
   ArrowRight,
