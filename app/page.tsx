@@ -1,9 +1,19 @@
 import Link from "next/link";
-import { icons, processSteps, proofPoints, reasons, services, work } from "./data";
+import {
+  blogPosts,
+  icons,
+  processSteps,
+  proofPoints,
+  reasons,
+  services,
+  work,
+} from "./data";
 
 const { ArrowRight, CheckCircle2 } = icons;
 
 export default function Home() {
+  const latestPosts = blogPosts.slice(0, 3);
+
   return (
     <main>
       <section className="hero">
@@ -96,6 +106,31 @@ export default function Home() {
         <div className="section-link">
           <Link href="/services">
             Explore all services <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
+
+      <section className="section home-insights-section">
+        <div className="section-heading">
+          <p className="eyebrow">Latest insights</p>
+          <h2>Practical thinking for better business systems.</h2>
+        </div>
+        <div className="home-insights-grid">
+          {latestPosts.map((post) => (
+            <article className="post-card" key={post.slug}>
+              <p className="eyebrow">{post.category}</p>
+              <h3>{post.title}</h3>
+              <p>{post.summary}</p>
+              <span>{post.readTime}</span>
+              <Link href={`/insights/${post.slug}`}>
+                Read article <ArrowRight size={16} />
+              </Link>
+            </article>
+          ))}
+        </div>
+        <div className="section-link">
+          <Link href="/insights">
+            Browse all insights <ArrowRight size={18} />
           </Link>
         </div>
       </section>

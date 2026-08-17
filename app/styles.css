@@ -967,6 +967,29 @@ h3 {
   gap: 16px;
 }
 
+.home-insights-section {
+  background: var(--paper);
+}
+
+.home-insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-insights-grid .post-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-insights-grid .post-card h3 {
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.home-insights-grid .post-card > p:not(.eyebrow) {
+  flex: 1;
+}
+
 .post-card {
   padding: 26px;
 }
@@ -1828,6 +1851,7 @@ h3 {
   .admin-layout,
   .admin-analytics-grid,
   .insights-layout,
+  .home-insights-grid,
   .site-footer,
   .cta-section.compact {
     grid-template-columns: 1fr;
