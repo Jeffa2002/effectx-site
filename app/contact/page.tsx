@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { icons } from "../data";
+import ContactForm from "./ContactForm";
 
-const { ArrowRight, LifeBuoy } = icons;
+const { LifeBuoy } = icons;
 
 export const metadata = {
   title: "Contact",
@@ -29,9 +30,7 @@ export default function ContactPage() {
             Tell us what is not working, what you need built and whether there
             are any systems or deadlines we should know about.
           </p>
-          <a className="primary-button" href="mailto:hello@effectx.com.au">
-            Email EffectX <ArrowRight size={18} />
-          </a>
+          <ContactForm />
         </article>
 
         <aside className="contact-details">

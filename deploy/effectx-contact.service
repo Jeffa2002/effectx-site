@@ -1,0 +1,22 @@
+[Unit]
+Description=EffectX contact form service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/effectx-site
+EnvironmentFile=/root/.config/effectx-site/contact.env
+ExecStart=/usr/bin/node /var/www/effectx-site/server/contact-server.mjs
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadOnlyPaths=/var/www/effectx-site
+
+[Install]
+WantedBy=multi-user.target
